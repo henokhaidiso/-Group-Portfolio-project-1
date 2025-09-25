@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  z-index: 6;
 
 }
 
@@ -54,7 +54,7 @@ body {
   color: #00abf0;
   transition: .3s;
   cursor: pointer;
-
+  z-index: 20;
 }
 .home{
   height:100vh;
@@ -66,6 +66,39 @@ body {
   padding: 0 20%;
   color:#ededed;
   
+}
+
+.home2 {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* text on left */
+  gap: 60px;                     /* spacing between text and image */
+  padding: 0 15%;
+  padding-top: 100px;
+  color: #ededed;
+  position: relative;
+  z-index: 5;
+}
+
+/* Keep text container as-is */
+.home2 .content {
+  max-width: 600px;
+  z-index: 10; 
+  position: relative;
+}
+
+/* Bubble photo */
+.home2 .profile-pic {
+  width: 20vw;          /* bigger */
+  height: auto;
+  max-width: 300px;
+  min-width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-left: 80px;     /* pushes it further right */
+  flex-shrink: 0;
 }
 
 .content{
